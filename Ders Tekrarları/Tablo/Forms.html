@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilgi Form</title>
+  </head>
+  <body>
+    <table style="background-color: rgb(240, 174, 180);">
+      <tbody>
+        <tr>
+          <td > 
+            <label>Adı</label></td>
+                      
+          <td>
+              <input type="text" name="Adı" placeholder="Adınızı Giriniz"></td>
+                
+          <td rowspan="3"><label > &nbsp&nbsp Hobiler </label>
+                  <td rowspan="3" >
+                    <input type="checkbox" name="Hobi" id="hb">
+                    <label for="hb">Futbol</label><br>
+            <input type="checkbox" name="Hobi" id="hb">
+                <label for="hb">Voleyboll</label><br>
+            <input type="checkbox" name="Hobi" id="hb">
+                <label for="hb">Basketbol</label>         
+            
+             </td>
+            </td>
+        </tr>
+        <tr>
+            
+          <td> <label >Soyadı</label>
+          </td><td>
+              <input type="text" name="Soyadı" placeholder="Soyadınızı Giriniz"></td>
+          
+        </tr>
+        <tr>
+          <td> <label >Cinsiyet</label>
+          </td><td>
+              <input type="radio" name="Cinsiyet" id="E">
+              <label for="E">Bay</label>
+      <input type="radio" name="Cinsiyet" id="K">
+      <label for="K">Bayan</label></td>
+          
+        </tr>
+        <tr>
+          <td><label >İlçe</label>
+          </td><td>
+              <select style="border-radius: 3px">
+                  <option>Lütfen bir ilçe seçiniz</option>
+                  <option value="Gemerek">Gemerek</option>
+                  <option value="Karatay">Karatay</option>
+                  <option value="Nazilli">Nazilli</option>
+                  <option value="Şirintepe">Şirintepe</option>
+              </select></td>
+          <td><Label>  &nbsp&nbsp Profil Fotoğrafı</Label> <td><input type="file" name="resim" placeholder="Dosya Seçiniz"></td>
+        </tr>
+        <tr>
+          <td><label>E-posta</label>
+          </td><td>
+              <input type="email" name="Adı" placeholder="E-postanızı Giriniz"></td>
+          <td><label >  &nbsp&nbsp Doğum Tarihi</label><td><input type="date" name="doğumtarihi" id=""></td></td>
+        </tr>
+        <tr>
+          <td><label>Kişisel Site</label>
+          </td><td>
+              <input type="url" name="Kişisel Site" placeholder="Site bağlantısı giriniz"></td>
+          <td rowspan="2"><label >  &nbsp&nbsp Adres</label><td rowspan="2"><textarea name="comment" id="com" cols="33" rows="3" maxlength="12"></textarea></td></td>
+          
+        <tr>
+          <td><label>Telefon</label>
+          </td><td>
+              <input type="tel" name="Telefon" placeholder="Telefon numaranızı giriniz"></td>
+          <td></td>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="button" value="Kayıt Ol" style="background-color: blueviolet;color: aliceblue;"></td></tr>
+        </tr>
+        </tr>
+      </tbody>
+    </table>
+    
+  </body>
+</html>
