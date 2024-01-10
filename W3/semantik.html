@@ -1,0 +1,141 @@
+<html>
+  <head>
+    <style>
+      .all-browsers {
+        margin: 0;
+        padding: 5px;
+        background-color: lightgray;
+      }
+
+      .all-browsers > h1,
+      .browser {
+        margin: 10px;
+        padding: 5px;
+      }
+
+      .browser {
+        background: white;
+      }
+
+      .browser > h2,
+      p {
+        margin: 4px;
+        font-size: 90%;
+      }
+      aside {
+        width: 30%;
+        padding-left: 15px;
+        margin-left: 15px;
+        float: right;
+        font-style: italic;
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      My family and I visited The Epcot center this summer. The weather was
+      nice, and Epcot was amazing! I had a great summer together with my family!
+    </p>
+
+    <aside>
+      <h4>Epcot Center</h4>
+      <p>
+        Epcot is a theme park at Walt Disney World Resort featuring exciting
+        attractions, international pavilions, award-winning fireworks and
+        seasonal special events.
+      </p>
+    </aside>
+
+    <p>
+      My family and I visited The Epcot center this summer. The weather was
+      nice, and Epcot was amazing! I had a great summer together with my family!
+    </p>
+    <p>
+      My family and I visited The Epcot center this summer. The weather was
+      nice, and Epcot was amazing! I had a great summer together with my family!
+    </p>
+    <article class="all-browsers">
+      <article>
+        <header>
+          <h1>What Does WWF Do?</h1>
+          <p>WWF's mission:</p>
+        </header>
+        <p>
+          WWF's mission is to stop the degradation of our planet's natural
+          environment, and build a future in which humans live in harmony with
+          nature.
+        </p>
+      </article>
+      <h1>Most Popular Browsers</h1>
+      <article class="browser">
+        <h2>Google Chrome</h2>
+        <p>
+          Google Chrome is a web browser developed by Google, released in 2008.
+          Chrome is the world's most popular web browser today!
+        </p>
+      </article>
+      <article class="browser">
+        <h2>Mozilla Firefox</h2>
+        <p>
+          Mozilla Firefox is an open-source web browser developed by Mozilla.
+          Firefox has been the second most popular web browser since January,
+          2018.
+        </p>
+      </article>
+      <article class="browser">
+        <h2>Microsoft Edge</h2>
+        <p>
+          Microsoft Edge is a web browser developed by Microsoft, released in
+          2015. Microsoft Edge replaced Internet Explorer.
+        </p>
+      </article>
+      <figure>
+        <img
+          src="/Ders Tekrarları/img/Iconarchive-Baby-Animal-Christmas-Baby-Lion-Christmas.ico"
+          alt="Trulli"
+        />
+        <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
+      </figure>
+    </article>
+
+    <br />
+    <hr />
+    <canvas
+      id="myCanvas"
+      width="200"
+      height="100"
+      style="border: 1px solid #d3d3d3"
+    >
+      Your browser does not support the HTML canvas tag.</canvas
+    >
+
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+
+      // Create gradient
+      var grd = ctx.createLinearGradient(0, 0, 200, 0);
+      grd.addColorStop(0, "red");
+      grd.addColorStop(1, "white");
+
+      // Fill with gradient
+      ctx.fillStyle = grd;
+      ctx.fillRect(10, 10, 150, 80);
+    </script>
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+      ctx.stroke();
+    </script>
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.font = "30px Arial";
+      ctx.strokeText("Hello World", 10, 50);
+    </script>
+    
+  </body>
+</html>

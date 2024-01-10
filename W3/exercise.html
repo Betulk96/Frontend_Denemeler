@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/Ders Tekrarları/img/Iconarchive-Baby-Animal-Christmas-Baby-Lion-Christmas.ico"
+    />
+
+    <style>
+      body {
+        background-color: rgb(198, 198, 224);
+        color: rgb(23, 113, 192);
+      }
+      a {
+        color: #d34444;
+        text-decoration: none;
+      }
+      p {
+        border: 1px solid rgb(233, 233, 229);
+      }
+      /*
+        solid ifadesi, bir kenarlık (border) stilini
+         dotted: Noktalı bir çizgi.
+dashed: Kesikli bir çizgi.
+double: Çift çizgi.
+groove: 3D çentikli bir çizgi.
+ridge: 3D çıkıntılı bir çizgi.
+inset: İçe doğru gömülü bir çizgi.
+outset: Dışa doğru çıkıntılı bir çizgi. */
+     /*  div {
+        width: 300px;
+        margin: auto;
+      } */
+      /* margin-top: 10px;
+margin-right: 20px;
+margin-bottom: 30px;
+margin-left: 40px; */
+/* div.mycontainer {
+  width:100%;
+  overflow:auto;
+}
+div.mycontainer div {
+  width:33%;  
+  float:left;
+} */
+
+/* Yukarıda ki de hizalama yapabilirz aşağıdaki gibide display olarak da yapabiliriz */
+
+.mycontainer {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+    </style>
+  </head>
+  <body>
+    <p>Im am so <q>Cool</q></p>
+    <p style="border: 1px solid rgb(218, 31, 31)">Hello World</p>
+    <!-- <div style="border: 1px solid rgb(126, 179, 29)">Hello World</div> -->
+
+    <div class="mycontainer">
+
+        <div style="background-color:#FFF4A3;">
+          <h2>London</h2>
+          <p>London is the capital city of England.</p>
+          <p>London has over 13 million inhabitants.</p>
+        </div>
+        
+        <div style="background-color:#FFC0C7;">
+          <h2>Oslo</h2>
+          <p>Oslo is the capital city of Norway.</p>
+          <p>Oslo has over 600.000 inhabitants.</p>
+        </div>
+        
+        <div style="background-color:#D9EEE1;">
+          <h2>Rome</h2>
+          <p>Rome is the capital city of Italy.</p>
+          <p>Rome has almost 3 million inhabitants.</p>
+        </div>
+      
+      </div>
+
+    <p>
+      The P and the DIV elements are both block elements, and they will always
+      start on a new line and take up the full width available (stretches out to
+      the left and right as far as it can).
+    </p>
+    <span style="border: 1px solid rgb(179, 29, 147)">Hello World</span>
+    <!-- div kullandığımızda kendi bölümü belli oluyor 20 px kadar alan belirledik. -->
+    <div style="background-color: rgb(59, 5, 5); color: white; padding: 20px">
+      <h2>London</h2>
+      <p>
+        London is the capital city of England. It is the most populous city in
+        the United Kingdom, with a metropolitan area of over 13 million
+        inhabitants.
+      </p>
+    </div>
+    <!-- div blr block ögesidir ,tüm satırı kaplar  ama  style içinde width ve margin ile oto ayarlayabiliriz-->
+    Lorem Ipsum
+    <div style="background-color: #e48a8a">I am a div</div>
+    dolor sit amet.
+    <div style="background-color: antiquewhite">
+      <h2>London</h2>
+      <p>London is the capital city of England.</p>
+      <p>London has over 13 million inhabitants.</p>
+    </div>
+    <p>
+      My mother has
+      <span style="color: blue; font-weight: bold">blue</span> eyes and my
+      father has
+      <span style="color: rgb(68, 104, 6); font-weight: bold">dark green</span>
+      eyes.
+    </p>
+    <blockquote>
+      cite ="http://www.worldwildlife.org/who/index.html"> For 50 years, WWF has
+      been protecting the future of nature. The world's leading conservation
+      organization, WWF works in 100 countries and is supported by 1.2 million
+      members in the United States and close to 5 million globally.
+    </blockquote>
+
+    <a href="default.html" title="Home" target="_blank">Back to Home</a>
+    <!-- abrr kısaltmayı tanımlar .üstüne gelince title bölümündeki kısım gözükür. -->
+    <p>
+      The <abbr title="World Health Organization">WHO</abbr> was founded in
+      1948.
+    </p>
+    <!-- bir belgenin veya makalenin yazarının/sahibinin iletişim bilgilerini tanımlar -->
+    <!-- italik olarak görüntülenir ve tarayıcılar her zaman öğenin önüne ve arkasına bir satır sonu ekler -->
+    <address>
+      Written by John Doe.<br />
+      Visit us at:<br />
+      Example.com<br />
+      Box 564, Disneyland<br />
+      USA
+    </address>
+
+    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+    <!-- Girilen dateyı ters ten yazdırır. -->
+    <bdo dir="rtl">This text will be written from right to left</bdo>
+    <p>
+      <img
+        src="/Ders Tekrarları/img/pexels-josiah-farrow-3396846.jpg"
+        width="100"
+        style="float: left"
+      />
+      This is a paragraph. This paragraph contains an image
+    </p>
+  </body>
+</html>
