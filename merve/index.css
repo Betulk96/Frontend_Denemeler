@@ -1,0 +1,83 @@
+:root {
+    /* kendi renk değişkenimizi oluşturduk .aşağıda var ile bunu kullanıyoruz */
+    --primary-color: #680516;
+    --secondy-color: #c468a1;
+    --border: #EAD196;
+    --text-color: #746505;
+    --radius: 3px solid;
+}
+
+body,
+html {    
+    margin: 50px;     
+    background-color: rgb(231, 223, 208);
+    color: var(--text-color);
+
+}
+header h1{    
+    margin:50px   ;
+    
+    text-align: center;   
+    background-color: #995661; 
+    border-radius: 30px;
+    color: rgb(209, 140, 140);
+    font-size:70px;
+    
+}
+
+nav.main-menu ul {
+    list-style-type:none ;
+    padding: 0;
+    text-align: center;
+    margin-top: 2rem;
+    
+    
+}
+
+.main-menu li  {
+    display: inline-block;
+   
+}
+.main-menu a {
+    padding: 10px 20px;
+    /* border-radius: 5px; kenarları oval yapmak için kullanıyoruz */     
+    margin-right: 5px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.main-menu a:hover {
+    background-color: #680516;
+    color: #d4cb8f;
+    padding: 10px;
+    font-size: 25px;
+}
+
+nav.iletisim ul {
+    background-color: #680516;
+    border-radius: 15px;
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    /* İstediğiniz yükseklik değeri */
+    right: 10px;
+    /* İstediğiniz sağlık değeri */
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    font-size: 40px;
+}
+
+nav.iletisim a {
+    text-decoration: none;
+    
+}
+
+nav.ortabaslik{
+    text-align: center;
+    border-radius: 15prgb(128, 1, 22)
+    background-color: #680516;
+}

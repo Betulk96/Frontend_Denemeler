@@ -1,0 +1,56 @@
+nav.menu li i {
+    color: rgb(216, 105, 31);
+
+
+}
+
+nav.menu li i:hover {
+    color: rgb(180, 180, 8);
+    cursor: pointer;
+
+
+}
+
+nav.menu li {
+    list-style: none;
+    margin: 0.5 rem;
+    text-decoration: none;
+
+
+}
+
+nav.menu {}
+
+nav.menu li a {
+    text-decoration: none;
+    : 10px;
+}
+
+nav.menu ul {
+    display: none;
+    
+    margin: 0;
+    padding-left: 0;
+    width: 100px;
+
+}
+
+nav.menu:hover ul {
+    display: inline-block;
+    background-color: rgb(14, 221, 193);
+    line-height: 1.5rem;
+}
+
+nav.menu ul a {
+    color: rgb(15, 15, 15);
+}
+
+nav.menu li a:hover {
+    background-color: rgba(7, 110, 117, 0.719);
+}
+
+nav.menu ul li:first-child {
+    text-align: center;
+    background-color: rgb(7, 145, 145);
+
+}
