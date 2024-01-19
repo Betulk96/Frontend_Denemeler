@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;        
+    
+}
+
+nav.navbar1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+}
+
+nav div {
+    background-color: rgb(226, 112, 112);    
+    padding: 10px;
+    padding-right:20%;    
+
+}
+
+div.banner {
+    background-color: rgb(145, 8, 8);
+    
+}
+
+nav.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+    gap: 20px;
+    
+
+}
+
+
+nav h1 {
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 15px;
+    background-color: crimson;
+    color: rgb(243, 241, 241);
+    
+}
+
+nav h2 {
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+p {
+    color: rgb(0, 0, 0);
+    
+    margin-left: 10px;
+    margin-right: 10px;
+   
+}
