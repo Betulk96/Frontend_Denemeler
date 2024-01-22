@@ -1,0 +1,373 @@
+:root {
+    --color1: #50623A;
+    --color2: #DBE7C9;
+    --color3: #789461;
+    --color4: #e47914;
+    --color5: #f5f4f2;
+    --color6: #294B29;
+    --color7: #a84706;
+}
+
+body {
+    font-family: "Comic", sans-serif;
+    background-color: var(--color1);
+    color: var(--color5);
+    padding: 0;
+}
+
+a {
+    color: var(--color2);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color7);
+}
+
+ul,
+ol {
+    list-style-type: none;
+    padding: 0;
+    /* padding: 0; çünkü browserdan gelen bir değer vardı onu sıfırladık */
+}
+
+button {
+    /* genel buton düzenlemesi */
+    background: #a84706bd;
+    border: none;
+    color: var(--color5);
+    padding: 8px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 60px;
+    /* herbiri browser temsil ediyor ,eski sürümleri kullananlarında buttonu görmesini sağlıyor*/
+    -webkit-border-radius: 60px;
+    /* chorem */
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    margin: 10px;
+}
+
+button:hover {
+    background-image: linear-gradient(#da6f0b, #f5decfbd);
+    color: var(--color6);
+    border: none;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+}
+
+.servicebtn {
+    background-color: #50623a50;
+    border: none;
+    color: var(--color6);
+}
+
+header nav.head1 {
+    background-color: var(--color6);
+    top: 0;
+    width: 100%;
+
+
+}
+
+header nav.head1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    top: 0;
+    left: 0;
+    right: 0;
+
+
+}
+
+nav.head1 ul {
+    cursor: pointer;
+    display: flex;
+    gap: 20px;
+
+}
+nav.head1 ul li:hover {
+    border: 1px solid #E5E1DA;    
+    border-top: #E5E1DA;
+    padding: 3px;
+    background-color: rgb(70, 112, 70);
+    color: #f8f5f5;
+    cursor: pointer;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+nav.head1 ol {
+    display: none;
+    
+}
+nav.head1 li.servicehover:hover ol {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    z-index: 10;
+    background-color: var(--color7);
+    color: var(--color6);
+    
+    border-radius: 10%;
+    padding: 10px;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+}
+nav.head1 li.servicehover:hover li:hover {
+    background-color: var(--color3);
+    padding: 5px;
+    
+}
+
+
+nav.head2 img {
+    width: 50px;
+    height: 50px;
+    
+}
+
+nav.head2 {
+    color: var(--color2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color:#7a5033;
+
+}
+
+div.calldiv i.fa-phone-volume,
+div.openingdiv i.fa-clock {
+
+    font-size: 40px;
+    color: var(--color2);
+
+}
+
+
+div.calldiv,
+div.openingdiv,
+div.logodiv {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+}
+
+
+
+div.callus {
+    display: block;
+}
+
+menu {
+    background-image: url(/webpages/img/head2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--color5);
+    font-size: 20px;    
+    -webkit-border-radius: 0%;
+    -moz-border-radius: 0%;
+    -ms-border-radius: 0%;
+    -o-border-radius: 0%;
+}
+
+menu nav.menubar1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 3rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #50623a48;
+}
+
+nav.menubar1 div ul {    
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-border-radius: 1;
+    -moz-border-radius: 1;
+    -ms-border-radius: 1;
+    -o-border-radius: 1;
+}
+
+
+nav.menubar1 div ul li:hover {
+    border: var(--color7);
+    border-radius: 10px;
+    padding: 3px;
+    background-color: #294B29;
+    color: #f8f5f5;
+    cursor: pointer;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+   
+}
+nav.menubar1 div ul li.hover ol {
+    display: none;
+    padding: 3px;
+    background-color: #50623afa;
+    font-weight: 100;
+    cursor: pointer;
+    
+}
+nav.menubar1 div ul li.hover:hover ol {
+    background-color: #40661186;
+    display: block;
+    position: fixed;
+    
+
+}
+nav.menubar1 div ul li.hover:hover ol li:hover{
+    background-color: #da6f0b60;
+}
+
+sup {
+    color: #E5E1DA;
+    background-color: var(--color7);
+    font-size: small;
+    
+}
+li.hover{
+    display: fixed;
+}
+.fa-sort-down{
+    display: block;
+    text-align: center;
+    font-size: small;
+    padding: 0;
+    margin: 0;
+}
+.fa-sort-down:last-of-type{
+  padding-right: 30px;
+}
+
+menu div.social-menu a,
+div.shopping a,
+div.home a {
+    background-color: #40661142;
+    color: var(--color2);
+    padding: 10px;
+}
+
+menu div.social-menu a:hover,
+div.shopping  a:hover,
+div.home a:hover {    
+    color: var(--color7);
+    
+}
+
+menu nav.menubar2 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+
+}
+
+menu nav.menubar2 h2 {
+    font-size: 40px;
+    font-weight: 100;
+    color: var(--color7);
+}
+
+menu nav.menubar2 h3 {
+    font-size: 30px;
+    font-weight: 100;
+    color: var(--color4);
+}
+menu nav.menubar2 pre{
+    background-color: #294b2983;
+    display: inline;
+    padding: 4px;
+    color: var(--color5);
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    color: #0f0f0f;
+    margin-right: 200px;
+    margin-left: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 50px;
+
+
+}
+
+main nav div.img {
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+    padding-top: 170px;
+    padding-left:
+    font-weight: bold;
+    color: var(--color5);
+    
+}
+
+main nav div h4{
+    font-size: 20px;
+    background-color: #294b2980;
+}
+main nav {
+    background-color: #c4c2bcc0;
+    width: 300px;
+    height: 430px;
+    text-align: center;
+}
+
+main nav div.text {
+    padding: 20px;
+}
+
+main nav.weare {
+    padding: 30px;
+}
+
+main nav.weare h2 {
+    font-size: 30px;
+    text-align: left;
+}
+
+footer {
+    background-color: var(--color6);
+    padding-bottom: 0px;
+    display: flex;
+    
+
+}
+
+
+footer div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}

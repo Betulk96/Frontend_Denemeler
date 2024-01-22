@@ -1,56 +1,50 @@
+:root{
+    --color1:#df6c0e;
+    --color2:#e6e209;
+    --color3:#99948773;
+    --color4:#f2f3f5ef;
+    --color5:#363c44;    
+    }
+
 nav.menu li i {
-    color: rgb(216, 105, 31);
-
-
+    color: var(--color1);
 }
 
 nav.menu li i:hover {
-    color: rgb(180, 180, 8);
+    color: var(--color2);
     cursor: pointer;
-
-
 }
 
 nav.menu li {
     list-style: none;
     margin: 0.5 rem;
     text-decoration: none;
-
-
-}
-
-nav.menu {}
+    }
 
 nav.menu li a {
     text-decoration: none;
-    : 10px;
+    color: var(--color4);
 }
 
-nav.menu ul {
+nav.menu ul {    
     display: none;
-    
     margin: 0;
     padding-left: 0;
     width: 100px;
-
 }
 
 nav.menu:hover ul {
     display: inline-block;
-    background-color: rgb(14, 221, 193);
+    background-color: var(--color3);
     line-height: 1.5rem;
 }
 
-nav.menu ul a {
-    color: rgb(15, 15, 15);
-}
-
 nav.menu li a:hover {
-    background-color: rgba(7, 110, 117, 0.719);
+    background-color: var(--color1);
+    border-radius: 5px;
 }
 
 nav.menu ul li:first-child {
     text-align: center;
-    background-color: rgb(7, 145, 145);
-
+    background-color: var(--color5);
 }
