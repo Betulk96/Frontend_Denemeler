@@ -9,10 +9,11 @@
 }
 
 body {
-    font-family: "Comic", sans-serif;
+    font-family: 'Raleway', sans-serif;
     background-color: var(--color1);
     color: var(--color5);
     padding: 0;
+
 }
 
 a {
@@ -80,7 +81,9 @@ header nav.head1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    padding: 20px 20px;
+
+    font-size: 100%;
     top: 0;
     left: 0;
     right: 0;
@@ -94,8 +97,9 @@ nav.head1 ul {
     gap: 20px;
 
 }
+
 nav.head1 ul li:hover {
-    border: 1px solid #E5E1DA;    
+    border: 1px solid #E5E1DA;
     border-top: #E5E1DA;
     padding: 3px;
     background-color: rgb(70, 112, 70);
@@ -109,16 +113,17 @@ nav.head1 ul li:hover {
 
 nav.head1 ol {
     display: none;
-    
+
 }
+
 nav.head1 li.servicehover:hover ol {
     display: block;
     cursor: pointer;
     position: fixed;
     z-index: 10;
-    background-color: var(--color7);
+    background-color: var(--color2);
     color: var(--color6);
-    
+
     border-radius: 10%;
     padding: 10px;
     -webkit-border-radius: 10%;
@@ -126,17 +131,18 @@ nav.head1 li.servicehover:hover ol {
     -ms-border-radius: 10%;
     -o-border-radius: 10%;
 }
+
 nav.head1 li.servicehover:hover li:hover {
-    background-color: var(--color3);
+    background-color: var(--color7);
     padding: 5px;
-    
+
 }
 
 
 nav.head2 img {
     width: 50px;
     height: 50px;
-    
+
 }
 
 nav.head2 {
@@ -148,7 +154,7 @@ nav.head2 {
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color:#7a5033;
+    background-color: #7a5033;
 
 }
 
@@ -156,7 +162,7 @@ div.calldiv i.fa-phone-volume,
 div.openingdiv i.fa-clock {
 
     font-size: 40px;
-    color: var(--color2);
+    color: var(--color);
 
 }
 
@@ -182,7 +188,7 @@ menu {
     background-size: cover;
     background-attachment: fixed;
     color: var(--color5);
-    font-size: 20px;    
+    font-size: 20px;
     -webkit-border-radius: 0%;
     -moz-border-radius: 0%;
     -ms-border-radius: 0%;
@@ -198,9 +204,10 @@ menu nav.menubar1 {
     left: 0;
     right: 0;
     background-color: #50623a48;
+
 }
 
-nav.menubar1 div ul {    
+nav.menubar1 div ul {
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -226,24 +233,27 @@ nav.menubar1 div ul li:hover {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-   
+
 }
+
 nav.menubar1 div ul li.hover ol {
     display: none;
     padding: 3px;
     background-color: #50623afa;
     font-weight: 100;
     cursor: pointer;
-    
+
 }
+
 nav.menubar1 div ul li.hover:hover ol {
     background-color: #40661186;
     display: block;
     position: fixed;
-    
+
 
 }
-nav.menubar1 div ul li.hover:hover ol li:hover{
+
+nav.menubar1 div ul li.hover:hover ol li:hover {
     background-color: #da6f0b60;
 }
 
@@ -251,20 +261,23 @@ sup {
     color: #E5E1DA;
     background-color: var(--color7);
     font-size: small;
-    
+
 }
-li.hover{
+
+li.hover {
     display: fixed;
 }
-.fa-sort-down{
+
+.fa-sort-down {
     display: block;
     text-align: center;
     font-size: small;
     padding: 0;
     margin: 0;
 }
-.fa-sort-down:last-of-type{
-  padding-right: 30px;
+
+.fa-sort-down:last-of-type {
+    padding-right: 30px;
 }
 
 menu div.social-menu a,
@@ -273,37 +286,48 @@ div.home a {
     background-color: #40661142;
     color: var(--color2);
     padding: 10px;
+    border-radius: 20%;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
 }
 
 menu div.social-menu a:hover,
-div.shopping  a:hover,
-div.home a:hover {    
-    color: var(--color7);
-    
+div.shopping a:hover,
+div.home a:hover {
+    color: var(--color4);
+    background-color: var(--color6);
+    padding: 10px;
+    border-radius: 20%;
+
 }
 
 menu nav.menubar2 {
     padding-top: 100px;
     padding-bottom: 100px;
-    
+
+
 
 }
 
 menu nav.menubar2 h2 {
     font-size: 40px;
-    font-weight: 100;
+    font-weight: bold;
     color: var(--color7);
 }
 
 menu nav.menubar2 h3 {
     font-size: 30px;
-    font-weight: 100;
+    font-weight: bold;
+    ;
     color: var(--color4);
 }
-menu nav.menubar2 pre{
+
+menu nav.menubar2 p {
     background-color: #294b2983;
-    display: inline;
-    padding: 4px;
+    display: inline-block;
+    width: 600px;
     color: var(--color5);
 }
 
@@ -324,17 +348,17 @@ main nav div.img {
     background-size: cover;
     width: 300px;
     height: 200px;
-    padding-top: 170px;
-    padding-left:
-    font-weight: bold;
+    padding-top: 170px;    
+    font-weight:bold;
     color: var(--color5);
-    
+
 }
 
-main nav div h4{
+main nav div h4 {
     font-size: 20px;
     background-color: #294b2980;
 }
+
 main nav {
     background-color: #c4c2bcc0;
     width: 300px;
@@ -359,7 +383,7 @@ footer {
     background-color: var(--color6);
     padding-bottom: 0px;
     display: flex;
-    
+
 
 }
 
@@ -370,4 +394,135 @@ footer div {
     align-items: center;
     padding: 20px;
     gap: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        font-size: small;
+    }
+
+    button {
+        font-size: 80%;
+    }
+
+
+    i.fa-solid {
+        font-size: 15px;
+    }
+
+    header nav.head1 h3 {
+        display: none;
+
+    }
+
+    nav.head2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px 2px;
+
+
+    }
+
+    nav.head2 h3 {
+        display: none;
+
+    }
+
+    nav.head2 div:hover {
+        cursor: pointer;
+
+    }
+
+    nav.head2 div:hover h3 {
+        display: block;
+    }
+
+    menu {
+        padding: 0;
+
+
+    }
+
+    menu div {
+        padding-left: 5px;
+        padding-right: 5px;
+
+    }
+
+
+    menu nav.menubar1 div.menu ul {
+        flex-direction: column;
+        position: fixed;
+        background-color: #145314a8;
+        padding: 0;
+        margin-left: -50px;
+        margin-top: 15px;
+        gap: 10px;
+
+
+    }
+
+    nav.menubar1 div.menu ol li {
+        background-color: var(--color2);
+        color: #294B29;
+        font-weight: bold;
+        margin: 50px;
+        margin-top: -50px;
+        margin-left: 90px;
+    }
+
+    nav.menubar1 div ul li.hover:hover ol {
+        background-color: #294b2900;
+    }
+
+    nav.menubar1 div ul li.hover:hover ol li:hover {
+        background-color: var(--color4);
+    }
+
+    div.menu {
+        display: none;
+        display: fixed;
+    }
+
+    div.home:hover+div.menu {
+        display: block;
+    }
+
+    menu nav.menubar2 {
+        padding-top: 50px;
+
+    }
+
+    menu nav.menubar2 p {
+        width: 100%;
+        padding: 10px;
+    }
+
+    main {
+        flex-direction: column;
+        text-align: center;
+        margin-right: 20px;
+        margin-left: 10%;
+    }
+
+    main nav div.img {
+        padding-top: 120px;
+    }
+
+    main nav {
+
+        width: 96%;
+        height: 20%;
+    }
+
+    main nav.weare {
+        padding: 20px;
+    }
+
+
+    footer div {
+        flex-direction: column;
+        text-align: center;
+    }
 }
