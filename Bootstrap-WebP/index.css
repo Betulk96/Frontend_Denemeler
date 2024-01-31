@@ -1,0 +1,147 @@
+:root {
+	--color1: #30a2b6a4;
+	--color2: #A1EEBD;
+	--color3: #F6F7C4;
+	--color4: #F6D6D6;
+	--color5: #200E3A;
+	--color6: #38419D;
+	--color7: #30a2b6;
+}
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 300;
+	font-size: 11pt;
+	line-height: 1.75em;
+
+	background-size: cover;
+	position: relative;
+}
+
+
+
+
+header nav.navbar {
+	background-color: var(--color1) !important;
+}
+
+a:hover {
+	color: var(--color1);
+}
+
+footer {
+	background-color:#30a2b6;
+	color: rgb(17, 2, 2);
+}
+
+.carousel img {
+	max-height: 600px;
+	width: 100%;
+	object-fit: cover;
+}
+
+main section li.list1 {
+	position: relative;
+}
+
+main section li.list1::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url(/Bootstrap-WebP/assets/img/pexels-jamal-yahyayev-5323489.jpg);
+	background-size: cover;
+	opacity: 0.9;
+	/* Opaklık seviyesini isteğinize göre ayarlayın (0 ile 1 arasında bir değer) */
+	z-index: -1;
+	/* İçerikten geride kalması için */
+}
+
+main section li.list2 {
+	position: relative;
+}
+
+main section li.list2::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url(/Bootstrap-WebP/assets/img/pexels-mehrdad-badr-12916029.jpg);
+	background-size: cover;
+	opacity: 0.7;
+	/* Opaklık seviyesini isteğinize göre ayarlayın (0 ile 1 arasında bir değer) */
+	z-index: -1;
+	/* İçerikten geride kalması için */
+}
+
+button:hover {
+	opacity: 0.7 !important;
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+}
+
+input:hover {
+	opacity: 0.7 !important;
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+}
+
+
+main.container1 div.col3,
+main.container1 div.col2,
+main.container1 div.col1 {
+	background-color: #c8e3e693 !important;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+main.container1 div.col2  div.card{
+	background-color: #98c1c762 !important;
+}
+main.container1 div.col2  div.card:hover{
+	background-color: #98c1c7e0 !important;	
+	transform:translateX(5%);	
+	transition: all 0.5s ease-in-out;
+	
+}
+
+main.container1 div.col3 a:hover{
+	background-color: #48e4cf73;
+	padding: 10px;
+}
+main.container div.col div.card {
+	background-color: #98c1c7b9 !important;
+}
+
+main.container div.col div.card:hover {
+
+	background-color: #30a2b6fa !important;
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+}
+
+
+div.carousel-caption {	
+	
+	color: #080111 !important;
+}
