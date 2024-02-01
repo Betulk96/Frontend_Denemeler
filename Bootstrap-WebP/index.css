@@ -16,13 +16,54 @@ body {
 
 	background-size: cover;
 	position: relative;
+	
 }
-
+/* CSS ile sayfa üzerindeki kaydırma çubuğunun rengini değiştirme */
+::-webkit-scrollbar {
+	width: 15px; /* Kaydırma çubuğu genişliği */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+	background-color: var(--color7); /* Kaydırma çubuğu rengi */
+	border-radius: 6px; /* Kenar yarıçapı */
+  }
+  
+  ::-webkit-scrollbar-track {
+	background-color: #cbe0e0; /* Kaydırma çubuğu arka plan rengi */
+  }
 
 
 
 header nav.navbar {
-	background-color: var(--color1) !important;
+	background-color: var(--color7) !important;
+}
+header nav.navbar button:first-child{
+	margin-left: 10px;
+	background-image: linear-gradient(to right, #d8a7a7 0%, #a0d4dd 100%);
+	color: #080111;
+	border: 1px ;	
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	font-size: larger;
+}
+@media screen and (min-width: 1200px) {
+	
+	header div.collapse ul{		
+		margin-left: 200px;
+		
+	}
+	header div.collapse ul .dropdown-menu{
+		margin-left: 0px;
+	}
+}
+
+
+header div div.collapse{
+	font-size: 100pt!important;
+
 }
 
 a:hover {
@@ -30,8 +71,17 @@ a:hover {
 }
 
 footer {
-	background-color:#30a2b6;
+	background-image: url(/Bootstrap-WebP/assets/img/pexels-mudassir-ali-2680270.jpg);
 	color: rgb(17, 2, 2);
+}
+footer div.row h5 ~ p{
+	background-color: #98c1c7b9 !important;
+	padding: 10px;
+	border-radius: 10px;
+	-webkit-border-radius: 10;
+	-moz-border-radius: 10;
+	-ms-border-radius: 10;
+	-o-border-radius: 10;
 }
 
 .carousel img {
@@ -77,9 +127,8 @@ main section li.list2::before {
 	z-index: -1;
 	/* İçerikten geride kalması için */
 }
-
 button:hover {
-	opacity: 0.7 !important;
+	background-color: ;
 	transform: scale(1.2);
 	-webkit-transform: scale(1.2);
 	-moz-transform: scale(1.2);
@@ -87,8 +136,8 @@ button:hover {
 	-o-transform: scale(1.2);
 }
 
-input:hover {
-	opacity: 0.7 !important;
+main input:hover {
+	background-image: linear-gradient(to right, #aa1b1b 0%, #a0d4dd 100%);
 	transform: scale(1.2);
 	-webkit-transform: scale(1.2);
 	-moz-transform: scale(1.2);
@@ -107,20 +156,26 @@ main.container1 div.col1 {
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
 }
-main.container1 div.col2  div.card{
+
+main.container1 div.col2 div.card {
 	background-color: #98c1c762 !important;
 }
-main.container1 div.col2  div.card:hover{
-	background-color: #98c1c7e0 !important;	
-	transform:translateX(5%);	
+
+main.container1 div.col2 div.card:hover {
+	background-color: #98c1c7e0 !important;
+	transform: translateX(5%);
 	transition: all 0.5s ease-in-out;
-	
+	-webkit-transform: translateX(5%);
+	-moz-transform: translateX(5%);
+	-ms-transform: translateX(5%);
+	-o-transform: translateX(5%);
 }
 
-main.container1 div.col3 a:hover{
+main.container1 div.col3 a:hover {
 	background-color: #48e4cf73;
 	padding: 10px;
 }
+
 main.container div.col div.card {
 	background-color: #98c1c7b9 !important;
 }
@@ -141,7 +196,8 @@ main.container div.col div.card:hover {
 }
 
 
-div.carousel-caption {	
-	
+div.carousel-caption {
+
 	color: #080111 !important;
 }
+header 

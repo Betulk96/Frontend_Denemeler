@@ -29,9 +29,10 @@
     <link rel="stylesheet" href="/Bootstrap-WebP/index.css" />
   </head>
 
-  <body>
+  <body class="">
+    
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
         <div class="container">
           <img
             src="https://icons.iconarchive.com/icons/klukeart/cubes/128/Box-03-Cake-Cherry-icon.png"
@@ -51,14 +52,24 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#"
                   >Anasayfa</a
                 >
               </li>
+
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <!-- Offcanvas butonu -->
+                <button
+                  type="button"
+                  class="btn btn-outline-light"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasWithBothOptions"
+                  aria-controls="offcanvasWithBothOptions"
+                >
+                  Tarifler
+                </button>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -70,7 +81,7 @@
                 >
                   Ürünler
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu dropdown-menu-dark">
                   <li><a class="dropdown-item" href="#">Pasta</a></li>
                   <li><a class="dropdown-item" href="#">Şerbetli Tatlı</a></li>
                   <li><a class="dropdown-item" href="#">Kuru Pasta</a></li>
@@ -100,6 +111,106 @@
           </div>
         </div>
       </nav>
+
+      <!-- Offcanvas -->
+      <div
+        class="offcanvas offcanvas-start"
+        data-bs-scroll="true"
+        tabindex="-1"
+        id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel"
+      >
+        <div class="offcanvas-header text-bg-dark">
+          <h5 class="offcanvas-title ps-5" id="offcanvasWithBothOptionsLabel">
+            Size Özel Lezzetlerimiz
+          </h5>
+          <button
+            type="button"
+            class="btn-close bg-light"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body text-bg-dark">
+          <ul class="list-group list-group-flush .">
+            <li class="list-unstyled">
+              <img
+                src="https://icons.iconarchive.com/icons/klukeart/cubes/128/Box-03-Cake-Cherry-icon.png"
+                width="50"
+                height="50"
+              />
+              <a class="navbar-brand text-uppercase" href="#"
+                >Turkish Delight
+              </a>
+              <p>
+                Try scrolling the rest of the page to see this option in action.
+              </p>
+            </li>
+            <li class="list-unstyled">
+              <p>
+                <img
+                  src="https://icons.iconarchive.com/icons/klukeart/cubes/128/Box-03-Cake-Cherry-icon.png"
+                  width="50"
+                  height="50"
+                />
+                Try scrolling the rest of the page to see this option in action.
+              </p>
+            </li>
+            <li class="list-unstyled">
+              <img
+                src="https://icons.iconarchive.com/icons/klukeart/cubes/128/Box-03-Cake-Cherry-icon.png"
+                width="50"
+                height="50"
+              />
+              <a class="navbar-brand text-uppercase" href="#"
+                >Turkish Delight
+              </a>
+              <p>
+                Try scrolling the rest of the page to see this option in action.
+              </p>
+            </li>
+            <li class="list-unstyled">
+              <img
+                src="https://icons.iconarchive.com/icons/klukeart/cubes/128/Box-03-Cake-Cherry-icon.png"
+                width="50"
+                height="50"
+              />
+              <a class="navbar-brand text-uppercase" href="#"
+                >Turkish Delight
+              </a>
+              <p>
+                Try scrolling the rest of the page to see this option in action.
+              </p>
+            </li>
+            <li class="list-unstyled">
+              <img
+                src="https://icons.iconarchive.com/icons/klukeart/cubes/128/Box-03-Cake-Cherry-icon.png"
+                width="50"
+                height="50"
+              />
+              <a class="navbar-brand text-uppercase" href="#"
+                >Turkish Delight
+              </a>
+              <p>
+                Try scrolling the rest of the page to see this option in action.
+              </p>
+            </li>
+            <li class="list-unstyled">
+              <img
+                src="https://icons.iconarchive.com/icons/klukeart/cubes/128/Box-03-Cake-Cherry-icon.png"
+                width="50"
+                height="50"
+              />
+              <a class="navbar-brand text-uppercase" href="#"
+                >Turkish Delight
+              </a>
+              <p>
+                Try scrolling the rest of the page to see this option in action.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
     <menu class="container-fluid carousel p-0">
       <div
@@ -130,7 +241,7 @@
           ></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="2000">
+          <div class="carousel-item active" data-bs-interval="5000">
             <img
               src="/Bootstrap-WebP/assets/img/kenta-kikuchi-LZ6BTZnizD8-unsplash.jpg"
               class="img-fluid"
@@ -141,7 +252,7 @@
               <h3>"İyi bir tatlı, iyi bir günü daha iyi hale getirebilir."</h3>
             </div>
           </div>
-          <div class="carousel-item" data-bs-interval="2000">
+          <div class="carousel-item" data-bs-interval="5000">
             <img
               src="/Bootstrap-WebP/assets/img/brooke-lark-of0pMsWApZE-unsplash.jpg"
               class="d-block w-100"
@@ -155,7 +266,7 @@
               </h3>
             </div>
           </div>
-          <div class="carousel-item" data-bs-interval="2000">
+          <div class="carousel-item" data-bs-interval="5000">
             <img
               src="/Bootstrap-WebP/assets/img/pexels-alexander-grey-1191639.jpg"
               class="d-block w-100"
@@ -190,7 +301,7 @@
       </div>
     </menu>
     <main class="container cardMenu">
-      <section class="row row-cols-1  row-cols-lg-4 g-4 mt-5">
+      <section class="row row-cols-1 row-cols-lg-4 g-4 mt-5">
         <div class="col m-0">
           <div class="card border border-0">
             <div class="card-body">
@@ -275,7 +386,7 @@
     <main class="container1">
       <section class="container">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mt-5 mb-5">
-          <div class="col1 col m-0 ps-4  pt-5 ">
+          <div class="col1 col m-0 ps-4 pt-5">
             <h2 class="">BAKLAVA</h2>
             <h4>Tatlıların Şahı</h4>
             <p>
@@ -446,7 +557,7 @@
       <div class="container p-4 pb-0">
         <section class="">
           <img
-          class="ms-4"
+            class="ms-4"
             src="https://icons.iconarchive.com/icons/lemon-liu/recipes/48/recipe-dessert-cake-icon.png"
             width="48"
             height="48"
@@ -454,9 +565,9 @@
 
           <div class="row">
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-center">
                 Turkish Delight
-              </h6>
+              </h5>
               <p>
                 Gurme Lezzetler, adını duyduğunuzda ağzınızın sularını akıtan
                 bir site. Yılların birikimi ve ustalıkla harmanlanan
@@ -561,6 +672,7 @@
         </section>
       </div>
     </footer>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
