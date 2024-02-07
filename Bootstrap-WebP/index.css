@@ -128,7 +128,7 @@ main section li.list2::before {
 	/* İçerikten geride kalması için */
 }
 button:hover {
-	background-color: ;
+	
 	transform: scale(1.2);
 	-webkit-transform: scale(1.2);
 	-moz-transform: scale(1.2);
@@ -200,4 +200,3 @@ div.carousel-caption {
 
 	color: #080111 !important;
 }
-header 

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hesap Makinesi</title>
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <h1>Hesap Makinesi</h1>
+          <table class="table table-success table-striped p-">
+            <thead>
+              <th class="text-end" colspan="4">
+                <h2 class="text-success" id="sonuc">0</h2>
+              </th>
+            </thead>
+            <tbody class="text-center">
+              <tr>
+                <td colspan="4" class="text-start ps-4">
+                  <button
+                    type="button"
+                    class="text-start btn btn-dark rounded-circle"
+                    onclick="clearExpression()"
+                  >
+                    C
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-success rounded-circle"
+                    onclick="appendToExpression(7)"
+                  >
+                    7
+                  </button>
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-success rounded-circle"
+                    onclick="appendToExpression(8)"
+                  >
+                    8
+                  </button>
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-success rounded-circle"
+                    onclick="appendToExpression(9)"
+                  >
+                    9
+                  </button>
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-success rounded-circle"
+                    onclick="appendToExpression('+')"
+                  >
+                    +
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-success rounded-circle"
+                    onclick="appendToExpression(4)"
+                  >
+                    4
+                  </button>
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-success rounded-circle"
+                    onclick="appendToExpression(5)"
+                  >
+                    5
+                  </button>
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-success rounded-circle"
+                    onclick="appendToExpression(6)"
+                  >
+                    6
+                  </button>
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-success rounded-circle"
+                    onclick="appendToExpression('-')"
+                  >
+                    -
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-success rounded-circle"
+                    onclick="appendToExpression(1)"
+                  >
+                    1
+                  </button>
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-success rounded-circle"
+                    onclick="appendToExpression(2)"
+                  >
+                    2
+                  </button>
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-success rounded-circle"
+                    onclick="appendToExpression(3)"
+                  >
+                    3
+                  </button>
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-success rounded-circle"
+                    onclick="appendToExpression('*')"
+                  >
+                    *
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-success rounded-circle"
+                    onclick="appendToExpression(0)"
+                  >
+                    0
+                  </button>
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-success rounded-circle"
+                    onclick="appendToExpression('.')"
+                  >
+                    .
+                  </button>
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-success rounded-circle"
+                    onclick="appendToExpression('/')"
+                  >
+                    /
+                  </button>
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-success rounded-circle"
+                    onclick="calculate()"
+                  >
+                    =
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      let expression = ""; // İfadeyi saklamak için bir değişken
+
+      function appendToExpression(value) {
+        /* expression adlı değişkene (+= operatörüyle) value adlı değeri ekler. */
+        expression += value; // İfadeye yeni değeri ekle
+        document.getElementById("sonuc").innerText = expression; // Sonucu güncelle
+      }
+
+      function calculate() {
+        const result = eval(expression); // İfadenin sonucunu hesapla
+        document.getElementById("sonuc").innerText = result; // Sonucu göster
+        expression = ""; // İfadeyi sıfırla
+      }
+
+      function clearExpression() {
+        expression = ""; // İfadeyi temizle
+        document.getElementById("sonuc").innerText = "0"; // Sonucu sıfırla
+      }
+    </script>
+  </body>
+</html>
