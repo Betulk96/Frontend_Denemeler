@@ -24,24 +24,50 @@
     <h3 class="result"></h3>
 
     <script>
-        let resultEl = document.querySelector(".result");
-  
-        const polindrome = () => {
-          let inputEl = document.querySelector("#inp");
-          let inputValue = inputEl.value;
-          let reverse = "";
-  
-          for (let i = inputValue.length - 1; i >= 0; i--) {
-            reverse += inputValue.charAt(i);
-          }
-  
-          if (inputValue == reverse) {
-            resultEl.innerHTML = `${inputValue} polindrome`;
-          } else {
-            resultEl.innerHTML = `${inputValue} polindrome degil`;
-          }
-        };
-      </script>
+      /* 1.Durum : inputEl ve inputValue değişkenleri polindrome fonksiyonunun içinde tanımlanmıştır. Bu, her polindrome fonksiyonu çağrıldığında, bu değişkenlerin yeni bir kopyasının oluşturulduğu anlamına gelir. Dolayısıyla, her fonksiyon çağrısı bağımsız bir kopya ile çalışır ve bir fonksiyon diğer fonksiyonların değişkenlerini etkilemez. */
+      let resultEl = document.querySelector(".result");
+
+      const polindrome = () => {
+        let inputEl = document.querySelector("#inp");
+        let inputValue = inputEl.value;
+        let reverse = "";
+
+        for (let i = inputValue.length - 1; i >= 0; i--) {
+          reverse += inputValue.charAt(i);
+        }
+
+        if (inputValue == reverse) {
+          resultEl.innerHTML = `${inputValue} polindrome`;
+        } else {
+          resultEl.innerHTML = `${inputValue} polindrome degil`;
+        }
+      };
+    </script>
+
+    <!-- 2.Durum: inputEl ve inputValue değişkenleri, herhangi bir fonksiyonun dışında, global kapsamda tanımlanmıştır. Bu, bu değişkenlerin tüm dosya boyunca erişilebilir ve paylaşılabilir olduğu anlamına gelir. Ancak, bu durumda inputValue değişkeninin değeri sadece sayfanın yüklendiği anda alınır ve daha sonra herhangi bir kullanıcı girişi değişikliğini yansıtmaz. Çünkü inputValue değişkeni, sayfanın yüklendiği anda inputEl elemanının değerini alır ve bundan sonra güncellenmez. -->
+    <script>
+      let resultEl1 = document.querySelector(".result");
+      let inputEl = document.querySelector("#inp");
+      //eğer value yi burada alırsak sayfa yüklendikten sonra degeri alır.ama o sırada kullanıcı daha değer girdi yapmaz.boş değeri okur.
+      let inputValue = inputEl.value;
+      //sonuç:document objesi değişkene atayabiliriz ama value ile işlem yapmak istiyorsak fonk içinde value değerini almalıyız.
+
+      const polindrome1 = () => {
+
+        //eğer value değerini fonk içinde alırsak her fonsksiyon çağrıldığında değerinide okuyabiliriz.1. örnekle aynı sonucu verir.kod çalışır.
+       /*  let inputValue = inputEl.value; */
+
+        let reverse = "";
+        for (let i = inputValue.length - 1; i >= 0; i--) {
+          reverse += inputValue.charAt(i);
+        }
+        if (inputValue == reverse) {
+          resultEl1.innerHTML = `${inputValue} polindrome`;
+        } else {
+          resultEl1.innerHTML = `${inputValue} polindrome degil`;
+        }
+      };
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
