@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //içindekinler dışarıdan erişilemez,scope dışından erişilemez
+      (function () {
+        var message = "Merhaba!";
+        console.log(message); // Burada message erişilebilir
+      })();
+
+      console.log(message); // Bu dışarıdan erişilemez ve ReferenceError verir
+    </script>
+
+    <script>
+      var Modul = (function () {
+        var privateVariable = "Gizli Değişken";
+
+        function privateFunction() {
+          console.log("Bu fonksiyon sadece bu modül içinden çağrılabilir");
+        }
+
+        return {
+          publicFunction: function () {
+            console.log("Bu fonksiyon dışarıdan çağrılabilir");
+          },
+        };
+      })();
+
+      Modul.publicFunction(); // publicFunction çağrılabilir
+      Modul.privateFunction(); // privateFunction erişilemez ve TypeError verir
+    </script>
+
+    <script>
+      var Counter = (function () {
+        var count = 0;
+
+        return {
+          increment: function () {
+            count++;
+          },
+          decrement: function () {
+            count--;
+          },
+          getCount: function () {
+            return count;
+          },
+        };
+      })();
+
+      Counter.increment();//1
+      Counter.increment();//2
+      console.log(Counter.getCount()); // Çıktı: 2
+    </script>
+  </body>
+</html>
