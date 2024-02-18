@@ -138,7 +138,7 @@ button:hover {
 	-o-transform: scale(1.2);
 }
 
-main input:hover {
+main input:hover ,.btn-container-offcanvas div.card input:hover{
 	background-image: linear-gradient(to right, #aa1b1b 0%, #a0d4dd 100%);
 	transform: scale(1.2);
 	-webkit-transform: scale(1.2);
@@ -174,8 +174,13 @@ main.container1 div.col2 div.card:hover {
 }
 
 main.container1 div.col3 a:hover {
-	background-color: #48e4cf73;
+	background-color: #98c1c7e0 ;
 	padding: 10px;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-ms-border-radius:10px;
+	-o-border-radius:10px;
 }
 
 main.container div.col div.card {
@@ -204,4 +209,18 @@ div.carousel-caption {
 }
 div.offcanvas {
 	background-color: #a4d8d5 ;
+}
+
+.offcanvas-button .filter-btn{
+	background-color:var(--color3);
+	border : 2px solid var(--color5);
+	
+}
+.offcanvas-button .filter-btn:hover{
+	background-color:var(--color5);
+	color: var(--color3);
+	
+}
+.btn-container-offcanvas div.card:first-child{
+	margin-top: 10px;
 }

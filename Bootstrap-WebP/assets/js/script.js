@@ -15,17 +15,17 @@ function displayOffcanvasItems(menuItems) {
   let displayMenu = menuItems.map((item) => {
     console.log(item);
 
-    return `<div class="card mb-3" style="max-width: 540px;">
+    return `<div class="card mb-3" style="max-width: 540px; ">
       <div class="row g-0">
-        <div class="col-md-4">
-          <img src="/Bootstrap-WebP/assets/img/pexels-anna-tukhfatullina-food-photographerstylist-2638026.jpg" class="${item.img}" alt="${item.baslik}">
+        <div class="col-md-4 ">
+          <img src="/Bootstrap-WebP/assets/img/pexels-anna-tukhfatullina-food-photographerstylist-2638026.jpg" class="img-fluid rounded-start h-100 "  alt="${item.baslik}">
         </div>
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">${item.baslik}</h5>
             <h6 class="card-title">${item.ulke}</h6>
             <p class="card-text">${item.acıklama}</p>
-            
+            <input type="button" value="Tarif " class="btn btn-danger " />
           </div>
         </div>
       </div>
@@ -56,9 +56,8 @@ const displayOffcanvasButtons = () => {
   const categoryBtns = categories
     .map((category) => {
       return `<button
-        class="btn btn-primary filter-btn"
-        type="button"
-       
+        class="btn  filter-btn  text-uppercase m-1  "
+        type="button"       
         data-bs-target="#"
         data-id="${category}"
         aria-controls=""
