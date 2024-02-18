@@ -38,8 +38,10 @@ header nav.navbar {
 	background-color: var(--color7) !important;
 }
 header nav.navbar button:first-child{
-	margin-left: 10px;
-	background-image: linear-gradient(to right, #d8a7a7 0%, #a0d4dd 100%);
+	/* margin-left: 10px; */
+	background-image: linear-gradient(30deg , var(--color2) ,var(--color4));
+	padding-top: 1px;
+	padding-bottom: 1px;
 	color: #080111;
 	border: 1px ;	
 	border-radius: 10px;
@@ -199,4 +201,7 @@ main.container div.col div.card:hover {
 div.carousel-caption {
 
 	color: #080111 !important;
+}
+div.offcanvas {
+	background-color: #a4d8d5 ;
 }

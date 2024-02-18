@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      button:hover {
+        cursor: pointer;
+        background-color: rgb(247, 244, 244) !important;
+        color: blueviolet !important;
+      }
+    </style>
+  </head>
+
+  <body class="bg-success-subtle text-danger">
+    <div class="container text-center">
+      <h1 class="text-center">Mutator Methods</h1>
+
+      <div>
+        <input type="text" id="inp" placeholder="Please Enter Your Text" />
+        <button
+          id="ek"
+          class="btn border-2 border-dark rounded-pill"
+          onclick="ekle()"
+        >
+          Add
+        </button>
+      </div>
+    </div>
+
+    <div class="col-lg-6 btn-group d-flex justify-content-center gap-1 mt-5">
+      <button
+        id="sirala"
+        class="btn btn-primary rounded-pill"
+        onclick="sirala()"
+      >
+        Sort
+      </button>
+      <button
+        id="terssirala"
+        class="btn btn-danger rounded-pill"
+        onclick="tersSirala()"
+      >
+        Reverse
+      </button>
+      <button
+        id="sonsil"
+        class="btn btn-warning rounded-pill"
+        onclick="sonSil()"
+      >
+        Remove Last
+      </button>
+      <button
+        id="ilksil"
+        class="btn btn-success rounded-pill"
+        onclick="ilkSil()"
+      >
+        Remove First
+      </button>
+      <button
+        id="hepsinisil"
+        class="btn btn-info rounded-pill"
+        onclick="hepsiniSil()"
+      >
+        Remove All
+      </button>
+      <button
+        id="calkala"
+        class="btn btn-dark rounded-pill"
+        onclick="karistir()"
+      >
+        Mix
+      </button>
+    </div>
+
+    <h3 id="sonuc"></h3>
+
+    <script src="/ödevler/mutator/homework.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
