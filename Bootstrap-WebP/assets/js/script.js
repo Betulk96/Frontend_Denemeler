@@ -72,10 +72,10 @@ const displayOffcanvasButtons = () => {
   console.log(filterBtns);
   //filter-btnlerin herhangi birini tıkladığımızda ekrana getirecek fonksiyon
   filterBtns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-        
+    btn.addEventListener("mouseover", (e) => {        
         
       const category = e.currentTarget.dataset.id;
+      console.log(category);
       let menuCategory;
 
       if (category === "all") {
@@ -88,3 +88,4 @@ const displayOffcanvasButtons = () => {
     });
   });
 };
+

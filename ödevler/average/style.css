@@ -1,0 +1,16 @@
+.table >thead >tr >th {
+    border: 5px solid white;
+    border-bottom: 8px solid white;
+}
+.table >tbody >tr >td {
+    border: 5px solid white;
+}
+.table >tfoot >tr >th {
+    border: 5px solid white;
+    text-align: end;
+}
+
+
+
+
+
