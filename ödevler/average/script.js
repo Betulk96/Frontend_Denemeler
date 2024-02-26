@@ -120,6 +120,8 @@ const correctionStudents = (name, point, selectEl,tbodyEl) => {
           pointElement.innerText = originalPoint;
           selectEl.innerHTML = "";
           addWriteDelButtonInSelect(selectEl);
+          correctionStudents(name, point, selectEl, tbodyEl);
+          deleteStudents();
         });
       });
     });
