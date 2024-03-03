@@ -23,10 +23,11 @@
   </head>
 
   <body>
-    <header class="container cntNavbar">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"
+    <header class="container cntNavbar ">
+     
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid m-2 ">
+          <a class="navbar-brand fs-5 " href="#"
             ><img
               src="https://icons.iconarchive.com/icons/guillendesign/variations-1/32/Television-2-icon.png"
               width="30"
@@ -49,7 +50,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a
-                  class="nav-link active"
+                  class="nav-link active  " 
                   aria-current="page"
                   href="#"
                   id="BtnHome"
@@ -57,13 +58,13 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">TURKISH MOVIE</a>
+                <a class="nav-link" id="btnJapanese" href="#">JAPANESE MOVIE</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">IMDB BEST</a>
+                <a class="nav-link" href="#" id="btnAnimation">ANIMATION</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">MOST WATCHING</a>
+                <a class="nav-link" href="#" id="btnMost">MOST WATCHING</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -81,32 +82,38 @@
           </div>
         </div>
       </nav>
+      <div id="loader"
+      class="d-flex justify-content-center align-items-center my-3"
+  >
+      <div
+          class="spinner-border text-warning spinner-border"
+          role="status"
+      >
+          <span class="visually-hidden">Loading...</span>
+      </div>
+  </div>
     </header>
+   
 
     <menu class="container cntCarousel">
       <nav></nav>
     </menu>
 
    
-    <main class="container ">
-      <div
-        class="row row-cols-1 row-cols-md-3 row-cols-lg-5 mt-5 mb-5 g-2 "
-        id="sectionCard"
-      >
-    <h1>Moving By Sortşng</h1>
-  </div>
-      <div class="rigthCategory">
-        <div class="categorys" id="categorys">
-          <h1>Lorem</h1>
-          <h1>Lorem</h1>
-          <h1>Lorem</h1>
-          <h1>Lorem</h1>
-          <h1>Lorem</h1>
-        </div>
-        </div>
-
+    <main class="container">
+      <div class="row row-cols-2 row-cols-md-3  mt-5 mb-5 g-2" id="sectionCard">
+          
       </div>
-    </main>
+      <div class="row rigthCategory mt-5 mb-5 g-2">
+          <div class="col categorys  " id="categorys">
+              <h1 class="text-uppercase border-bottom border-dark ">Category</h1>
+              <div id="category">
+                  
+              </div>
+          </div>
+      </div>
+  </main>
+  
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
