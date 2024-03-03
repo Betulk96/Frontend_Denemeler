@@ -1,0 +1,66 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2016/03/23/17/33/curtain-1275200_1280.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+
+
+
+}
+
+header nav,
+menu nav,
+main section {
+    background-color: rgba(165, 10, 10, 0.452);
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+
+    text-align: center;
+}
+
+div.card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.418);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+div.card-img-overlay:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+div.card-img-overlay h5,
+p {
+    font-size: medium;
+    color: #f0cd08;
+
+}
+
+main.container {
+    display: flex;
+    gap: 20px;
+
+}
+
+.rigthCategory {
+    flex: 1;
+}
+
+.categorys {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
