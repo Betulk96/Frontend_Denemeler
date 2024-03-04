@@ -37,6 +37,7 @@ const renderMovies = async () => {
     if (movies.length <= 0) {
       strShows = `<div class="alert alert-danger">No show was found</div>`;
     } else {
+     
       movies.forEach((item) => {
         strShows += createCard(item);
       });
@@ -90,7 +91,7 @@ const createCard = (item) => {
 document.addEventListener("DOMContentLoaded", renderMovies);
 
 // BtnHome tıklandığında da sıralı bir düzeyde gelsin
-btnHome.addEventListener("click", () => {
+const home = btnHome.addEventListener("click", () => {
   movieContent.innerHTML = ""; // movieContent içeriğini temizle
   renderMovies(); // renderMovies fonksiyonunu çağır
 });
@@ -163,7 +164,9 @@ btnSearch.addEventListener("click", async (e) => {
     let strShows = "";
 
     if (shows.length <= 0) {
-      strShows = `<div class="alert alert-danger">No show was found</div>`;
+      alert("No show was found");
+      setLoaderVisibility("hide");
+      home();
     } else {
       shows.forEach((item) => {
         strShows += createCard(item.show);
@@ -177,9 +180,7 @@ btnSearch.addEventListener("click", async (e) => {
 });
 
 const setCategories = async () => {
-  
   try {
-    
     const data = await loadMovies();
     let allGenres = data.map((item) => item.genres).flat(); //flat ile iç içe geçmiş olanları düzleştiriyor.tüm kategorileri alabilmek
     //console.log(allGenres);
