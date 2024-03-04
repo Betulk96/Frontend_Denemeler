@@ -17,21 +17,69 @@ body {
 }
 
 header nav,
-menu nav,
-main section {
-    background-color: rgba(90, 65, 65, 0.658);
+menu nav {
+    background-color: rgba(209, 26, 26, 0.164);
+    font-size: 20px;
+    font-weight: bold;
+
+    border-radius: 10px;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+ nav.titleContent {
+    background-color: rgba(224, 87, 87, 0.459);
     font-size: 20px;
     font-weight: bold;
     border-radius: 10px;
+    color: #f3f2f2;
+    padding: 10px;
     text-align: center;
-    -webkit-border-radius: 10;
-    -moz-border-radius: 10;
-    -ms-border-radius: 10;
-    -o-border-radius: 10;
+
+} 
+
+nav.titleContent button {
+    background-image: linear-gradient(45deg, rgb(176, 179, 170) 10%, rgb(196, 13, 13) 100%);
+    cursor: pointer;
+    color: rgb(238, 219, 219);
+    text-align: center;
+    border: none;
+    width: 50px;
+    font-size: 1.3rem ;
+}
+
+section.summaryContent p {
+    background-color: #b8909552;
+    color: rgb(236, 234, 234);
+    border-radius: 10px;
+    
+
+}
+
+section.summaryContent td:first-child {
+    background-color: #b8909528;
+    color: rgb(236, 234, 234);
+    padding: 5px;
+    text-transform: uppercase;
+}
+section.summaryContent td:nth-child(2) {
+    background-color: #be646e52;
+    color: rgb(236, 234, 234);
+    padding: 5px;
+   
+}
+
+header div a {
+    color: rgb(228, 195, 195) !important;
+
 }
 
 header div>a {
     background-image: linear-gradient(90deg, rgb(122, 93, 93) 0%, rgb(194, 15, 15) 100%);
+    color: white !important;
     padding: 20px;
     border-radius: 5px;
     -webkit-border-radius: 5;
@@ -59,23 +107,24 @@ div.card-img-overlay {
 div.card-img-overlay:hover {
     background-color: rgba(0, 0, 0, 0);
     color: #fff;
-    
-    
+
+
 }
+
 div h3.cardRating {
     background-color: #420707;
-    border-radius:5px;
+    border-radius: 5px;
     font-size: large;
-    color: white;    
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    -ms-border-radius:5px;
-    -o-border-radius:5px;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 div.cardBody {
     width: 100%;
-    background-color: #42070798;    
+    background-color: #42070798;
     font-size: medium;
     color: #dddbce;
     text-align: center;

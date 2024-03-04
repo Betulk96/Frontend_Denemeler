@@ -69,13 +69,13 @@
             </ul>
             <form class="d-flex" role="search">
               <input
-                class="form-control me-2 bg-danger-subtle border-dark text-light"
+                class="form-control me-2  border-dark text-light"
                 type="search"
                 placeholder="Search Movies..."
                 aria-label="Search"
                 id="txtSearch"
               />
-              <button class="btn btn-dark" type="submit" id="btnSearch">
+              <button class="btn btn-dark" type="button" id="btnSearch">
                 Search
               </button>
             </form>
@@ -100,7 +100,8 @@
     </menu>
 
    
-    <main class="container">
+    <main class="container" id="cardContainer">
+      <div class ="row  mt-5 mb-5 g-2 " id="movieContent" ></div>
       <div class="row row-cols-2 row-cols-md-3  mt-5 mb-5 g-2" id="sectionCard">
           
       </div>

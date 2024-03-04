@@ -7,11 +7,12 @@ const categorys = document.getElementById("category");
 const btnJapanese = document.getElementById("btnJapanese");
 const btnAnimation = document.getElementById("btnAnimation");
 const btnMost = document.getElementById("btnMost");
+const movieContent = document.getElementById("movieContent");
 
 const loadMovies = async () => {
   try {
     const res = await axios.get(`${API_BASE_URL}shows`);
-    console.log(res);
+    //console.log(res);
     return res.data.sort((a, b) => a.name.localeCompare(b.name));
   } catch (error) {
     console.error("Error loading movies:", error);
@@ -60,7 +61,7 @@ const renderMoviesBySelect = (movies) => {
 const createCard = (item) => {
   const { id, image, name, schedule, rating } = item;
   return `<div class="col-lg-3">
-      <div class="card h-100 position-relative" data-id="${id}">
+      <div class="card movie-card h-100 position-relative" data-id="${id}">
       <h3 class="cardRating fs-5 position-absolute top-0 end-0">${rating.average}</h3>
           <img
               src="${image.original}"
@@ -89,9 +90,13 @@ const createCard = (item) => {
 document.addEventListener("DOMContentLoaded", renderMovies);
 
 // BtnHome tıklandığında da sıralı bir düzeyde gelsin
-btnHome.addEventListener("click", renderMovies);
+btnHome.addEventListener("click", () => {
+  movieContent.innerHTML = ""; // movieContent içeriğini temizle
+  renderMovies(); // renderMovies fonksiyonunu çağır
+});
 
 btnJapanese.addEventListener("click", async () => {
+  movieContent.innerHTML = "";
   setLoaderVisibility("show");
   const data = await loadMovies();
   /*
@@ -110,7 +115,8 @@ btnJapanese.addEventListener("click", async () => {
   }
 });
 btnAnimation.addEventListener("click", async () => {
-  setLoaderVisibility;
+  movieContent.innerHTML = "";
+  setLoaderVisibility("show");
   const data = await loadMovies();
   /* const type = data.map((item) => item.type);
   const filteredType = [...new Set(type)];
@@ -126,6 +132,7 @@ btnAnimation.addEventListener("click", async () => {
 });
 
 btnMost.addEventListener("click", async () => {
+  movieContent.innerHTML = "";
   setLoaderVisibility("show");
   const data = await loadMovies();
   const rating = data.filter((item) => item.rating.average > 8);
@@ -170,7 +177,9 @@ btnSearch.addEventListener("click", async (e) => {
 });
 
 const setCategories = async () => {
+  
   try {
+    
     const data = await loadMovies();
     let allGenres = data.map((item) => item.genres).flat(); //flat ile iç içe geçmiş olanları düzleştiriyor.tüm kategorileri alabilmek
     //console.log(allGenres);
@@ -188,6 +197,7 @@ const setCategories = async () => {
 
     // Kategori bağlantılarına tıklama olayı ekleyin
     categorys.addEventListener("click", (e) => {
+      movieContent.innerHTML = "";
       let selectedGenre = e.target.textContent;
       console.log(selectedGenre);
       // loadMovies fonksiyonu ile filmleri yükle
@@ -218,3 +228,159 @@ const setCategories = async () => {
 };
 
 setCategories();
+const loadMovieById = async (id) => {
+  try {
+    const movies = await loadMovies(); // Tüm filmleri yükle
+    console.log(movies);
+    const movie = movies.find((movie) => movie.id === parseInt(id)); // İstenen id'ye sahip filmi bul
+    return movie ? movie : null; // Film bulunduysa döndür, bulunamadıysa null döndür
+  } catch (error) {
+    console.error("Error loading movie by ID:", error);
+    return null;
+  }
+};
+const showCast = async (q) => {
+  try {
+    const res = await axios(`${API_BASE_URL}shows/${q}/cast`);
+    return res.data;
+  } catch (error) {
+    console.error("Error searching movies:", error);
+    return [];
+  }
+};
+
+const showCrew = async (q) => {
+  try {
+    const res = await axios(`${API_BASE_URL}shows/${q}/crew`);
+    return res.data;
+  } catch (error) {
+    console.error("Error searching movies:", error);
+    return [];
+  }
+};
+const setMovie = cardContainer.addEventListener("click", async (e) => {
+  const idData = e.target.closest(".movie-card").dataset.id;
+  //console.log(idData);
+
+  if (!idData) return;
+
+  try {
+    setLoaderVisibility("show");
+    const movie = await loadMovieById(idData); // Belirli bir filmi yükle
+    console.log(movie, 1);
+    const {
+      id,
+      image,
+      name,
+      schedule,
+      rating,
+      network,
+      summary,
+      language,
+      genres,
+    } = movie;
+
+    setLoaderVisibility("show");
+    const cast = await showCast(idData); // Belirli bir filmi yükle
+    console.log(cast, 3);
+    const characterNames = cast
+      .slice(0, 5)
+      .map((item) => item.character.name)
+      .join(", ");
+
+    setLoaderVisibility("show");
+    const crew = await showCrew(idData);
+    console.log(crew, 4);
+    const creatorNames = crew
+      .filter((member) => member.type === "Creator")
+      .map((member) => member.person.name)
+      .join(", "); // Creator isimlerini birleştir
+    console.log(creatorNames);
+
+    if (movie) {
+      sectionCard.innerHTML = "";
+      movieContent.innerHTML = createContent(
+        movie,
+        characterNames,
+        creatorNames
+      ); // Film içeriğini oluşturup ekrana yazdır
+    } else {
+      movieContent.innerHTML = `<div class="alert alert-danger">Movie not found</div>`; // Film bulunamadıysa hata mesajı göster
+    }
+
+    setLoaderVisibility("hide");
+  } catch (error) {
+    console.error("Error loading and displaying movie:", error);
+  }
+});
+
+const createContent = (movie, characterName, creatorName) => {
+  // Parametre adı cast'ten movie olarak değiştirildi
+  const {
+    id,
+    image,
+    name,
+    schedule,
+    rating,
+    network,
+    summary,
+    language,
+    genres,
+  } = movie;
+
+  return ` <div class="container">
+   <nav class="container titleContent d-flex justify-content-between  " data-id="${id}">
+  <div class="leftHeader">
+    <h1>${name}</h1>
+  </div>
+  <div class="rightHeader mt-2 ">
+    <button class="btn ">${rating.average} </button>
+    <button class="btn ">${network.country.code} </button>
+    
+  </div>
+</nav>
+<nav 
+  class="container imgSummaryContent d-flex justify-content-between  mt-2 "
+>
+  <section class="imgContent col-3">
+    <img
+    src="${image.original}"
+    alt="${image.original}" style="width: 90%;">
+  </section>
+  <section class="summaryContent col-9">
+    <p class="text-start">${summary}</p>    
+    
+    <table>
+      <tbody class="t">
+        <tr>
+          <td>Direction</td>
+          <td><span>${creatorName}</span></td>
+        </tr>
+        <tr>
+          <td>Days</td>
+          <td><span>${schedule.days}</span></td>
+        </tr>
+        <tr>
+          <td>Channel</td>
+          <td><span>${network.name} </span></td>
+        </tr>
+        <tr>
+          <td>Language</td>
+          <td><span>${language}</span></td>
+        </tr>
+        <tr>
+          <td>Category</td>
+          <td>
+            <span>${genres} </span>
+          </td>
+        </tr>
+        <tr>
+          <td>Cast</td>
+          <td>${characterName}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</nav>
+</div>`;
+};
