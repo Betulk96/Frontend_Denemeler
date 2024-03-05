@@ -1,0 +1,15 @@
+node_modules/
+dist/
+img/
+chatgbt/
+merve/
+
+
+*.jpg
+*.png
+*.ico
+
+
+
+
+
